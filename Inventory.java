@@ -1,14 +1,16 @@
 import java.util.ArrayList;
+import java.util.Comparator;
+
 public class Inventory{
 	//attribute
-	protected ArrayList <Products> products;
+	protected ArrayList <Product> products;
 
 	//constructor
 	/**
 	 * Constructor for Inventory.
 	 */
 	public Inventory(){
-		product = new ArrayList<>();
+		products = new ArrayList<>();
 	}
 
 	//methods
@@ -24,14 +26,17 @@ public class Inventory{
 	/**
 	 * Remove product by _.
 	 */
-	//public void removeProduct(){ };
+	public void removeProduct(String name){
+		for(int i = 0; i < products.size(); i++){
+			if(name.equals(products.get(i).productName)) products.remove(i);
+		}
+
+	}
 
 	/**
 	 * Display by expiration date, closest to expire - furtheset to expire. 
 	 */
-	public void display(){ 
-		products.sort(Comparator.reverseOrder());
-			
+	public void display(){
 	}
 
 	/**
