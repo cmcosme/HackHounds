@@ -8,7 +8,7 @@ public class Product{
 	protected String status; // (3) Good, about to expire, expired 
 	protected String productName; // name of the product
 	protected String location;
-	protected boolean cooked;
+	protected String cooked;
 	
 	//constructor
 	public Product(String ex, String ty, String stats, String name, String location, boolean cooked){
@@ -36,6 +36,13 @@ public class Product{
 	 * Calculates how many days until item expires.
 	 */
 	public int expDate() {}
-	
 
-
+	/**
+	 * Format nicely.
+	 */
+	public String toString(){
+		return productName + ", " + type + ", " + location + ", " + cooked + ", " + expiration; 
+		
+	}
+	}
+}
