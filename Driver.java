@@ -2,7 +2,17 @@ public class Driver{
 	public static void main(String[] args){
 
 	Inventory inven = new Inventory();
+	
+	//testing methods
+	System.out.println(inven.addProduct);
+	System.out.println(inven);
 
+
+
+
+
+
+/*
 	//Create CLI
 	CLI cli = new CLI(inven);
 
@@ -22,6 +32,7 @@ public class Driver{
 	 * Reads file to put into inventory.
 	 * @param inven - Inventory to put Items.
 	 */
+/*
 	public void fileReader(Inventory inven){	
 		Scanner input = new Scanner(System.in);
 		while (input.hasNextLine()){
@@ -41,7 +52,7 @@ public class Driver{
 		}
 	}
 
-
+*/
 
 	}
 		
