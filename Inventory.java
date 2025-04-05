@@ -1,20 +1,36 @@
-
-
+import java.util.ArrayList;
 public class Inventory{
 	//attribute
-	protected ArrayList <Products> product;
+	protected ArrayList <Products> products;
 
 	//constructor
+	/**
+	 * Constructor for Inventory.
+	 */
 	public Inventory(){
 		product = new ArrayList<>();
 	}
 
 	//methods
+	/**
+	 * Add a product to Array list.
+	 * @param newProduct is the new product to add to the ArrayList.
+	 */
+	public void addProduct(Product newProduct){
+		products
+		      
+	};
+
+	/**
+	 * Remove product by _.
+	 */
+	//public void removeProduct(){ };
 	
 
-	//public addProduct(){  };
-	//public removeProduct(){ };
-	//public display(){ ];
+	/**
+	 * Display by expiration date, closest to expire - furtheset to expire. 
+	 */
+	//public void display(){ ];
 
 
 

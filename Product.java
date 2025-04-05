@@ -21,9 +21,21 @@ public class Product{
 	
 	//methods
 	
+	/**
+	 * Clock method to track day. 
+	 */
+
+	/**
+	 * Updates the status of the item depending on date - expiration date.
+	 */
+	public void updateStatus(){
+		//x
+	} 
 	
-	//public updateStatus(){} 
-	//public exp date() {}
+	/**
+	 * Calculates how many days until item expires.
+	 */
+	public int expDate() {}
 	
 
 
