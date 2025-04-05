@@ -1,4 +1,4 @@
-
+import java.time.LocalDate;
 
 public class Product{
         
@@ -11,31 +11,37 @@ public class Product{
 	protected String cooked;
 	
 	//constructor
-	public Product(String ex, String ty, String stats, String name, String location, boolean cooked){
+	public Product(String ex, String ty, String stats, String name, String location, String cooked){
 		expiration = ex;
 		type = ty;
 		status = stats;
 		productName = name;
 		this.location = location;
 		this.cooked = cooked;
+	}
 	
 	//methods
 	
 	/**
-	 * Clock method to track day. 
+	 * Clock method to track day.
+	 *
 	 */
+	public void date(){
+		LocalDate date = LocalDate.now();//create date object
+		System.out.println(date);
+	}
 
 	/**
 	 * Updates the status of the item depending on date - expiration date.
 	 */
-	public void updateStatus(){
+	//public void updateStatus(){
 		//x
-	} 
+	//} 
 	
 	/**
 	 * Calculates how many days until item expires.
 	 */
-	public int expDate() {}
+	//public int expDate() {}
 
 	/**
 	 * Format nicely.
@@ -44,5 +50,5 @@ public class Product{
 		return productName + ", " + type + ", " + location + ", " + cooked + ", " + expiration; 
 		
 	}
-	}
+	
 }

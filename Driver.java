@@ -1,14 +1,19 @@
+
+import java.util.Iterator;
+
 public class Driver{	
 	public static void main(String[] args){
 
 	Inventory inven = new Inventory();
-	
 	//testing methods
 
 
-		Product item = new Product("04-12-2025", "fruit", "g", "apple", "fridge", true );
+		Product item = new Product("04-12-2025", "fruit", "g", "apple", "fridge", "cooked");
 		inven.addProduct(item);
-	System.out.println(inven);
+		inven.iterate();
+		
+		System.out.println("Testing date");
+		inven.date();
 
 
 

@@ -1,5 +1,8 @@
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.Iterator;
+import java.time.LocalDate;
+ 
 
 public class Inventory{
 	//attribute
@@ -22,6 +25,14 @@ public class Inventory{
 		products.add(newProduct);
 		      
 	};
+
+
+	public void date(){
+                LocalDate date = LocalDate.now();//create date object
+                System.out.println(date);
+        }
+
+
 
 	/**
 	 * Remove product by _.
@@ -46,8 +57,16 @@ public class Inventory{
 	
 
 	/**
-	 *
+	 * Print
 	 */
+	public void iterate(){
+		Iterator <Product> itr = products.iterator();
+		while (itr.hasNext()){
+			Product nextPlace = itr.next();
+			System.out.println(nextPlace);
+		}
+	}
+
 
 
 
