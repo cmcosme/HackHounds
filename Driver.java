@@ -4,7 +4,10 @@ public class Driver{
 	Inventory inven = new Inventory();
 	
 	//testing methods
-	System.out.println(inven.addProduct);
+
+
+		Product item = new Product("04-12-2025", "fruit", "g", "apple", "fridge", true );
+		inven.addProduct(item);
 	System.out.println(inven);
 
 
