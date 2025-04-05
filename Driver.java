@@ -11,9 +11,15 @@ public class Driver{
 		Product item = new Product("04-12-2025", "fruit", "g", "apple", "fridge", "cooked");
 		inven.addProduct(item);
 		inven.iterate();
-		
+
+
 		System.out.println("Testing date");
 		inven.date();
+
+		//testing remove
+		System.out.println("Remove successful");
+		inven.removeProduct(item);
+		inven.iterate();
 
 
 
