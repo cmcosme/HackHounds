@@ -17,7 +17,7 @@ public class Inventory{
 	 * @param newProduct is the new product to add to the ArrayList.
 	 */
 	public void addProduct(Product newProduct){
-		products
+		products.add(newProduct);
 		      
 	};
 
@@ -25,14 +25,24 @@ public class Inventory{
 	 * Remove product by _.
 	 */
 	//public void removeProduct(){ };
-	
 
 	/**
 	 * Display by expiration date, closest to expire - furtheset to expire. 
 	 */
-	//public void display(){ ];
+	public void display(){ 
+		products.sort(Comparator.reverseOrder());
+			
+	}
 
+	/**
+	 * Find product. 
+	 */
+	//public void displayProduct(){}
+	
 
+	/**
+	 *
+	 */
 
 
 
