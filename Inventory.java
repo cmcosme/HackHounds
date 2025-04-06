@@ -1,15 +1,19 @@
+/**
+* This is my code! It's goal is to store products in the Inventory.
+* HackHounds 2024, PET (Product Expiration Tracker)
+* @author Camila Cosme, Donovan, Henry, Gigi
+* @version a.1
+*/
+
+
 import java.util.ArrayList;
-import java.util.TreeMap;
-import java.util.Map;
 import java.util.Iterator;
 import java.time.LocalDate;
 import java.util.Collections; 
 
 public class Inventory{
-	//attribute
 	protected ArrayList <Product> products;
 
-	//constructor
 	/**
 	 * Constructor for Inventory.
 	 */
@@ -17,7 +21,6 @@ public class Inventory{
 		products = new ArrayList<>();
 	}
 
-	//methods
 	/**
 	 * Add a product to Array list.
 	 * @param newProduct is the new product to add to the ArrayList.
@@ -27,6 +30,10 @@ public class Inventory{
 		      
 	};
 
+	/**
+	 * Remove product from list using the name of the product.
+	 * @param name - name of the product. 
+	 */
 	public void removeProduct(String name){
 		Iterator <Product> itr = products.iterator();
                 while (itr.hasNext()){
@@ -52,6 +59,9 @@ public class Inventory{
 		}
 	}
 */
+	/**
+	 * Display information by sorting by product expiration dates.
+	 */
 	public void displayExpDate(){
 		Collections.sort(products);
 		for (Product product: products){
@@ -82,7 +92,7 @@ public class Inventory{
 	}
 */
 	/**
-	 * Find product. 
+	 * Find product.
 	 */
 	public ArrayList<Product> findProduct(String name){
 		ArrayList <Product> temp = new ArrayList<>();
@@ -96,6 +106,9 @@ public class Inventory{
 		return temp;
 	}
 
+	/**
+	 * Find product and print it out.
+	 */
 	public void displayProductName(String product){
 		ArrayList <Product> tempArr = findProduct(product);
 		for (Product products : tempArr){
@@ -105,7 +118,7 @@ public class Inventory{
 
 
 	/**
-	 * Print
+	 * Display all. 
 	 */
 	public void iterate(){
 		Iterator <Product> itr = products.iterator();

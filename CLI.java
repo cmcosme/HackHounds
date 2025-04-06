@@ -1,11 +1,14 @@
+/**
+* This is my code! It's goal is for Command Line Interface.
+* HackHounds 2024, PET (Product Expiration Tracker)
+* @author Camila Cosme, Donovan, Henry, Gigi
+* @version a.1
+*/
 public class CLI{
-
-	//attributes
 	protected Inventory inventory;
 	Driver drive = new Driver();
 	
 	
-	//methods
 	/**
 	 * CLI constructor using given Inventory.
 	 */
@@ -15,6 +18,10 @@ public class CLI{
 	}
 	
 
+	/**
+	 * Process the CLI
+	 * @param args - user's arguments
+	 */
 	public void processor (String[] args){
 		if (args.length == 0){ //if there are no arguments
 			System.out.println ("\nInvalid number of arguments provided: ");
@@ -30,22 +37,23 @@ public class CLI{
 					inventory.iterate(); //Display all
 				}
 
-				else if (args[1].equals("-e")){ //compares arg1 to see if it's -f
+				else if (args[1].equals("-f")){//finds and display certain item.
+					inventory.displayProductName(name);
+				}
+					
+
+				else if (args[1].equals("-e")){ //sorts by expiration date
                                         drive.fileReader(inventory);
-					inventory.displayExpDate(); //Display items with matching Title
+					inventory.displayExpDate(); //display from closes expired to furthest. 
 					}
                              
 				break;
 
 			case "-a": //add item
-				//if (args.length < 7){
-				//	System.out.println ("Not enought arguments: ");
-				//	break;
-				//}
 				Product temp  = new Product(args[5], args[2], args[6], args[1], args[4], args[3]);
-				drive.fileReader(inventory);
-				inventory.addProduct(temp);
-				inventory.iterate();
+				drive.fileReader(inventory); //read file
+				inventory.addProduct(temp); //add new product to list. 
+				inventory.iterate(); //print list
 				break;
 
 			case "-r"://removes flag
@@ -73,16 +81,10 @@ public class CLI{
 			"MENU: "+
 			"\nUsage: java Driver [-d|-a|-r] <options>" +
 			"\nthere are three command line options" +
-			"\n(display) -d | -e \"sorted by expiration date\"" +
+			"\n(display) -d | -e \"sorted by expiration date\" | -f <name of product> display certain item" +
 			"\n(add) -a Product \"Product_name\" type_of_product location [ cooked|raw ] expiration status" +
 			"\n(remove) -r \n");
 	}
-
-
-
-
-
-
 
 
 }
