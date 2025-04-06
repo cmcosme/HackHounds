@@ -55,12 +55,12 @@ public class Inventory{
 		// This will store the product names and their expiration dates in an integer format
 		TreeMap<Integer, String> listSort = new TreeMap<>();
 
-		for (Product product : products) {
+		for (int i = 0; i < products.size(); i++) {
 			// Parse the expiration date in the format dd/mm/yyyy
-			String[] arr = product.expiration.split("-"); // Expiration is assumed to be in "dd/MM/yyyy" format
+			String[] arr = products.get(i).expiration.split("-"); // Expiration is assumed to be in "dd/MM/yyyy" format
 			String expiration = arr[2] + arr[1] + arr[0];  // Convert to yyyymmdd format
 			int total = Integer.parseInt(expiration);      // Convert string to integer (yyyymmdd)
-			listSort.put(total, product.productName);      // Use expiration date as key, product name as value
+			listSort.put(total, products.get(i).productName);      // Use expiration date as key, product name as value
 		}
 
 		// Now listSort is sorted by expiration date (ascending order) because TreeMap sorts by keys
