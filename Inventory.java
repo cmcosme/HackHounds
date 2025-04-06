@@ -50,7 +50,8 @@ public class Inventory{
 	/**
 	 * Display by expiration date, closest to expire - furtheset to expire. 
 	 */
-	public void displayExpDate(Inventory inventory){
+	//
+	public void displayExpDate(){
 		// This will store the product names and their expiration dates in an integer format
 		TreeMap<Integer, String> listSort = new TreeMap<>();
 
