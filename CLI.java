@@ -39,14 +39,14 @@ public class CLI{
 
 				else if (args[1].equals("-f")){//finds and display certain item.
 					//drive.fileReader(inventory);
-					Product item = new Product("04-12-2025", "fruit", "g", "apple", "fridge", "cooked");
-                			Product item2 = new Product("04-11-2025", "fruit", "g", "pineapple", "fridge", "cooked");
+					drive.fileReader(inventory);
 					inventory.displayProductName(args[2]);
 				}
 					
 
 				else if (args[1].equals("-e")){ //sorts by expiration date
-                                        drive.fileReader(inventory);
+					 Product item = new Product("04-12-2025", "fruddit", "g", "apple", "fridge", "cooked");
+                                        Product item2 = new Product("04-11-2025", "fruit", "g", "pineapple", "fridge", "cooked");
 					inventory.displayExpDate(); //display from closes expired to furthest. 
 					}
                              
