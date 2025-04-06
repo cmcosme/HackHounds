@@ -4,7 +4,7 @@ public class Product implements Comparable<Product>{
         
 	//attributes
 	protected String expiration; //expiration date
-        protected String type; //type of product
+	protected String type; //type of product
 	protected String status; // (3) Good, about to expire, expired 
 	protected String productName; // name of the product
 	protected String location;
@@ -15,7 +15,7 @@ public class Product implements Comparable<Product>{
 		expiration = ex;
 		type = ty;
 		status = stats;
-		productName = name;
+	 	productName = name;
 		this.location = location;
 		this.cooked = cooked;
 	}
