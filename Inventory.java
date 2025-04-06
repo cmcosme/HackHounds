@@ -27,29 +27,31 @@ public class Inventory{
 		      
 	};
 
+	public void removeProduct(String name){
+		Iterator <Product> itr = products.iterator();
+                while (itr.hasNext()){
+                       Product nextPlace = itr.next();
+                       if (!nextPlace.isProduct(name)){
+                               System.out.println(nextPlace);
+                        }
+                }
 
-
-	public void date(){
-                LocalDate date = LocalDate.now();//create date object
-                System.out.println(date);
         }
 
-
-
+/*
 	/**
 	 * Remove product by _.
 	 */
-	public void removeProduct(String name){
+/*	public void removeProduct(String name){
 		ArrayList<Product> temp = new ArrayList<>();
 		for(int i = 0; i < products.size(); i++){
-			if(!(name.equals(products.get(i).productName))){
-				temp.add(products.get(i));
+			if(!(product.isProduct(name))){
+				temp.add(product);
+
 			}
 		}
-		products.clear();
-		products.addAll(temp);
 	}
-
+*/
 	public void displayExpDate(){
 		Collections.sort(products);
 		for (Product product: products){

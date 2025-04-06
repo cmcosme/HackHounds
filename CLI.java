@@ -49,10 +49,9 @@ public class CLI{
 				break;
 
 			case "-r"://removes flag
-				if (args.length < 2){ //if there is one argument
 					drive.fileReader(inventory);
-					inventory.removeProduct(args[4]); //Display items with matching name
-                                }
+					inventory.removeProduct(args[1]); //Display items with matching name
+                                
 	
 				break;
 
