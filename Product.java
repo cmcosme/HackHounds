@@ -74,7 +74,7 @@ public class Product{
 		
 
 		//add to date
-		switch(type.toLowerCase){
+		switch(type.toLowerCase()){
 		case "meat":
 			this.expiration = date.plusDays().format(dateFormatter);
 			break;
