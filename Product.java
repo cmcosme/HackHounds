@@ -26,8 +26,8 @@ public class Product{
 	 * Updates the status of the item depending on date - expiration date.
 	 */
 	public void updateStatus(String otherDate){
-		int currDate;
-		int date2;
+		int currDate = -1;
+		int date2 = -1;
 		
 		//get current date
 		LocalDate date = LocalDate.now();//create date object

@@ -13,13 +13,16 @@ public class Driver{
 		inven.iterate();
 
 
-		System.out.println("Testing date");
-		inven.date();
-
 		//testing remove
 		System.out.println("Remove successful");
 		inven.removeProduct(item);
 		inven.iterate();
+
+		//testing
+		inven.displayExpDate(inven); 
+
+		//find product
+		inven.findProduct("apple");
 
 
 
