@@ -70,8 +70,8 @@ public class Inventory{
 
 	/**
 	 * Find product. 
-	 */n
-	public ArrayList<Product> findAuthor(String name){
+	 */
+	public ArrayList<Product> findProduct(String name){
 		ArrayList <Product> temp = new ArrayList<>();
 		Iterator <Product> itr = products.iterator();
 		while (itr.hasNext()){
