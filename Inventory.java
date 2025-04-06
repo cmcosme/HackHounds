@@ -1,10 +1,9 @@
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.TreeMap;
 import java.util.Map;
 import java.util.Iterator;
 import java.time.LocalDate;
- 
+import java.util.Collections; 
 
 public class Inventory{
 	//attribute
@@ -47,11 +46,18 @@ public class Inventory{
 
 	}
 
+	public void displayExpDate(){
+		Collections.sort(products);
+		for (Product product: products){
+			System.out.println(product);
+		}
+	}
+/*
 	/**
 	 * Display by expiration date, closest to expire - furtheset to expire. 
 	 */
 	//
-	public void displayExpDate(){
+/*	public void displayExpDate(){
 		// This will store the product names and their expiration dates in an integer format
 		TreeMap<Integer, String> listSort = new TreeMap<>();
 
@@ -68,7 +74,7 @@ public class Inventory{
 			System.out.println(entry.getValue() + " - Expiration: " + entry.getKey());
 		}
 	}
-
+*/
 	/**
 	 * Find product. 
 	 */

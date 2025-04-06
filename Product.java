@@ -1,6 +1,6 @@
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-public class Product{
+public class Product implements Comparable<Product>{
         
 	//attributes
 	protected String expiration; //expiration date
@@ -116,6 +116,36 @@ public class Product{
 	}
 	*/
 	
+	@Override
+	public int compareTo(Product x){
+		//return this.exponent - x.exponent; //ascending order - need decending order
+		int date = -1;
+		int date2 = -1;
+
+		String[] a = x.expiration.split("-");
+                String combineA= a[2] + a[0] + a[1];
+                try{
+                        date = Integer.parseInt(combineA);
+                }catch (NumberFormatException e){
+                        System.out.println("Invalid number.");
+                }
+
+		
+		String[] b = this.expiration.split("-");
+                String combineB = b[2] + b[0] + b[1];
+                try{
+                        date2 = Integer.parseInt(combineB);
+                }catch (NumberFormatException e){
+                        System.out.println("Invalid number.");
+                }
+
+		
+		
+		return date2 - date;
+	}
+
+
+
 	/**
 	 * Format nicely.
 	 */
