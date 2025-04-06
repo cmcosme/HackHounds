@@ -2,6 +2,7 @@ public class CLI{
 
 	//attributes
 	protected Inventory inventory;
+	Driver drive = new Driver();
 	
 	
 	//methods
@@ -12,7 +13,7 @@ public class CLI{
 		this.inventory = inventory;
 
 	}
-
+	
 
 	public void processor (String[] args){
 		if (args.length == 0){ //if there are no arguments
@@ -38,7 +39,7 @@ public class CLI{
 
 			case "-a": //add item
 				Product temp  = new Product(args[4], args[2], args[5], args[6], args[1], args[3]);
-				inventory.addToInventory(temp);
+				inventory.addProduct(temp);
 				inventory.iterate();
 				break;
 

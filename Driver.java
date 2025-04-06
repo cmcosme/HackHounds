@@ -70,7 +70,7 @@ public class Driver{
                         	String status = tok.nextToken();
 				Driver driver = new Driver();
 				Product newProduct = new Product(title, type, price, prop1, prop2, status);
-				inven.addToInventory(newProduct);
+				inven.addProduct(newProduct);
 			}
 		}
 	}
