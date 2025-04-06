@@ -42,11 +42,12 @@ public class Inventory{
 	public void removeProduct(String name){
 		ArrayList<Product> temp = new ArrayList<>();
 		for(int i = 0; i < products.size(); i++){
-			if(!name.equals(products.get(i).productName)){
+			if(!(name.equals(products.get(i).productName))){
 				temp.add(products.get(i));
 			}
 		}
-		products = temp;
+		products.clear();
+		products.addAll(temp);
 	}
 
 	public void displayExpDate(){
