@@ -24,32 +24,28 @@ public class CLI{
 
 		switch(args[0]){
 			case "-d": //display product
-					if (args.length < 2){ //if there is one argument
+				if (args.length < 2){ //if there is one argument
 					drive.fileReader(inventory);
 					inventory.iterate(); //Display all
 				}
 
-				else if (args[1].equals("-")){ //compares arg1 to see if it's -f
+				else if (args[1].equals("-a")){ //compares arg1 to see if it's -f
                                         drive.fileReader(inventory);
-					inventory.display(args[2]); //Display items with matching Title
-				}
-
-				else if (args[1].equals("-a")){ //compares arg1 to see if it's -a
-                                        drive.fileReader(inventory);
-					inventory.displayMatchingAuthor(args[2]); //Display items with mathching Authors
-                                }
+					inventory.displayExpDate(); //Display items with matching Title
+					}
+                             
 				break;
 
 			case "-a": //add item
 				Product temp  = new Product(args[4], args[2], args[5], args[6], args[1], args[3]);
 				inventory.addToInventory(temp);
 				inventory.iterate();
+				break;
 
-			case "-s"://removes flag
-				
+			case "-r"://removes flag
 				if (args.length < 2){ //if there is one argument
-                                        drive.fileReader(inventory);
-					inventory.removeProduct(args[2]); //Display items with matching Title
+					drive.fileReader(inventory);
+					inventory.removeProduct(args[4]); //Display items with matching name
                                 }
 	
 				break;
@@ -61,9 +57,6 @@ public class CLI{
 		}
 
 	}
-
-
-
 
 
 

@@ -150,7 +150,7 @@ public class Product implements Comparable<Product>{
 	 * Format nicely.
 	 */
 	public String toString(){
-		return productName + ", " + type + ", " + location + ", " + cooked + ", " + expiration; 
+		return productName + ", " + type + ", " + location + ", " + cooked + ", " + expiration + ", " + status; 
 		
 	}
 	
