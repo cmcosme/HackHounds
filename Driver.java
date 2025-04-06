@@ -15,7 +15,6 @@ public class Driver{
 		inven.iterate();
 
 		//display by date sorted
-		inven.displayExpDate();
 
 		//testing remove
 		System.out.println("Remove successful");
