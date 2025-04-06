@@ -135,7 +135,7 @@ public class Product implements Comparable<Product>{
                 try{
                         date = Integer.parseInt(combineA);
                 }catch (NumberFormatException e){
-                        System.out.println("Invalid number.");
+                        System.out.println("Invalid number1.");
                 }
 
 		
@@ -144,7 +144,7 @@ public class Product implements Comparable<Product>{
                 try{
                         date2 = Integer.parseInt(combineB);
                 }catch (NumberFormatException e){
-                        System.out.println("Invalid number.");
+                        System.out.println("Invalid number2.");
                 }
 
 		

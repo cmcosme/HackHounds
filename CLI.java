@@ -38,7 +38,9 @@ public class CLI{
 				}
 
 				else if (args[1].equals("-f")){//finds and display certain item.
-					drive.fileReader(inventory);
+					//drive.fileReader(inventory);
+					Product item = new Product("04-12-2025", "fruit", "g", "apple", "fridge", "cooked");
+                			Product item2 = new Product("04-11-2025", "fruit", "g", "pineapple", "fridge", "cooked");
 					inventory.displayProductName(args[2]);
 				}
 					
@@ -82,9 +84,9 @@ public class CLI{
 			"MENU: "+
 			"\nUsage: java Driver [-d|-a|-r] <options>" +
 			"\nthere are three command line options" +
-			"\n(display) -d | -e \"sorted by expiration date\" | -f <name of product> display certain item" +
-			"\n(add) -a Product \"Product_name\" type_of_product location [ cooked|raw ] expiration status" +
-			"\n(remove) -r \n");
+			"\n(display) -d < inputFile | -e \"sorted by expiration date\" | -f <name of product> display certain item < inputFile" +
+			"(add) -a Product \"Product_name\" type_of_product storage_type [cooked|raw] mm/dd/yyyy status <filename_read> outputFile" +
+			"\n(remove) -r <product name>\n");
 	}
 
 
