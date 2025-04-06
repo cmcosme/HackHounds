@@ -36,7 +36,7 @@ public class Product{
 		try{
 			currDate = Integer.parseInt(combineA);
 		}catch (NumberFormatException e){
-			System.out.println("Invalid number.")
+			System.out.println("Invalid number.");
 		}
 
 		// other date
@@ -69,7 +69,7 @@ public class Product{
 		
 
 		//add to date
-		switch(type.toLowerCase){
+		switch(type.toLowerCase()){
 		case "meat":
 			this.expiration = date.plusDays().format(dateFormatter);
 			break;

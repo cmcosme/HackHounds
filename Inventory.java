@@ -29,6 +29,7 @@ public class Inventory{
 	};
 
 
+
 	public void date(){
                 LocalDate date = LocalDate.now();//create date object
                 System.out.println(date);
@@ -49,7 +50,7 @@ public class Inventory{
 	/**
 	 * Display by expiration date, closest to expire - furtheset to expire. 
 	 */
-	public void display(Inventory inventory){
+	public void displayExpDate(Inventory inventory){
 		// This will store the product names and their expiration dates in an integer format
 		TreeMap<Integer, String> listSort = new TreeMap<>();
 
@@ -69,8 +70,18 @@ public class Inventory{
 
 	/**
 	 * Find product. 
-	 */
-	//public void displayProduct(){}
+	 */n
+	public ArrayList<Product> findAuthor(String name){
+		ArrayList <Product> temp = new ArrayList<>();
+		Iterator <Product> itr = products.iterator();
+		while (itr.hasNext()){
+			Product nextPlace = itr.next();
+			if (nextPlace.isProduct(name)){
+				temp.add(nextPlace);
+			}
+		}
+		return temp;
+	}
 	
 
 	/**
