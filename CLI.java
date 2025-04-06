@@ -38,7 +38,8 @@ public class CLI{
 				}
 
 				else if (args[1].equals("-f")){//finds and display certain item.
-					inventory.displayProductName(name);
+					drive.fileReader(inventory);
+					inventory.displayProductName(args[2]);
 				}
 					
 

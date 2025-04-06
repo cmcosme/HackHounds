@@ -112,7 +112,7 @@ public class Inventory{
 	public void displayProductName(String product){
 		ArrayList <Product> tempArr = findProduct(product);
 		for (Product products : tempArr){
-			System.out.println(product);
+			System.out.println(products);
 		}
 	}
 
