@@ -40,14 +40,13 @@ public class Inventory{
 	 * Remove product by _.
 	 */
 	public void removeProduct(String name){
+		ArrayList<Product> temp = new ArrayList<>();
 		for(int i = 0; i < products.size(); i++){
-			if(name.equals(products.get(i).productName)){
-			       	System.out.println(products.get(i).productName);
-				products.remove(i);
-				i--;
+			if(!name.equals(products.get(i).productName)){
+				temp.add(products.get(i));
 			}
 		}
-
+		products = temp;
 	}
 
 	public void displayExpDate(){
