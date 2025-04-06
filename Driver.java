@@ -12,6 +12,7 @@ public class Driver{
 		inven.addProduct(item);
 		inven.iterate();
 
+		inven.displayExpDate(inven);
 
 		//testing remove
 		System.out.println("Remove successful");
@@ -19,7 +20,7 @@ public class Driver{
 		inven.iterate();
 
 		//testing
-		inven.displayExpDate(inven); 
+
 
 		//find product
 		inven.findProduct("apple");

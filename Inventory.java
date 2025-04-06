@@ -56,7 +56,7 @@ public class Inventory{
 
 		for (Product product : products) {
 			// Parse the expiration date in the format dd/mm/yyyy
-			String[] arr = product.expiration.split("/"); // Expiration is assumed to be in "dd/MM/yyyy" format
+			String[] arr = product.expiration.split("-"); // Expiration is assumed to be in "dd/MM/yyyy" format
 			String expiration = arr[2] + arr[1] + arr[0];  // Convert to yyyymmdd format
 			int total = Integer.parseInt(expiration);      // Convert string to integer (yyyymmdd)
 			listSort.put(total, product.productName);      // Use expiration date as key, product name as value
@@ -82,7 +82,14 @@ public class Inventory{
 		}
 		return temp;
 	}
-	
+
+	public void displayProductName(String product){
+		ArrayList <Product> tempArr = findProduct(product);
+		for (Product products : tempArr){
+			System.out.println(product);
+		}
+	}
+
 
 	/**
 	 * Print
