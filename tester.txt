@@ -1,0 +1,3 @@
+apple, fruit, fridge, cooked, g, 04-12-2025
+pineapple, fruit, fridge, cooked, g, 04-11-2025
+tomato, vegi, raw, fridge, g, 12-11-2024
