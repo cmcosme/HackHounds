@@ -62,14 +62,15 @@ public class Driver{
 			String line = input.nextLine();
 			StringTokenizer tok = new StringTokenizer (line, ",");
 			if (tok.countTokens() == 6){
-				String title = tok.nextToken();
+				String name = tok.nextToken();
                 		String type = tok.nextToken();
-                		String price = tok.nextToken();
-                       		String prop1 = tok.nextToken();
-                        	String prop2 = tok.nextToken();
-                        	String status = tok.nextToken();
+                		String location = tok.nextToken();
+                       		String raw= tok.nextToken();
+                        	String date = tok.nextToken();
+                        	String status= tok.nextToken();
+
 				Driver driver = new Driver();
-				Product newProduct = new Product(title, type, price, prop1, prop2, status);
+				Product newProduct = new Product(status, type, date, name, raw, location);
 				inven.addProduct(newProduct);
 			}
 		}

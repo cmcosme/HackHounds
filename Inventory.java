@@ -41,7 +41,11 @@ public class Inventory{
 	 */
 	public void removeProduct(String name){
 		for(int i = 0; i < products.size(); i++){
-			if(name.equals(products.get(i).productName)) products.remove(i);
+			if(name.equals(products.get(i).productName)){
+			       	System.out.println(products.get(i).productName);
+				products.remove(i);
+				i--;
+			}
 		}
 
 	}

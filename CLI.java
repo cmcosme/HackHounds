@@ -30,7 +30,7 @@ public class CLI{
 					inventory.iterate(); //Display all
 				}
 
-				else if (args[1].equals("-a")){ //compares arg1 to see if it's -f
+				else if (args[1].equals("-e")){ //compares arg1 to see if it's -f
                                         drive.fileReader(inventory);
 					inventory.displayExpDate(); //Display items with matching Title
 					}
@@ -38,7 +38,12 @@ public class CLI{
 				break;
 
 			case "-a": //add item
-				Product temp  = new Product(args[4], args[2], args[5], args[6], args[1], args[3]);
+				//if (args.length < 7){
+				//	System.out.println ("Not enought arguments: ");
+				//	break;
+				//}
+				Product temp  = new Product(args[5], args[2], args[6], args[1], args[4], args[3]);
+				drive.fileReader(inventory);
 				inventory.addProduct(temp);
 				inventory.iterate();
 				break;
@@ -67,11 +72,11 @@ public class CLI{
 	public static void menu(){
 		System.out.println (
 			"MENU: "+
-			"\nUsage: java Driver [-d|-a|-s] <options>" +
+			"\nUsage: java Driver [-d|-a|-r] <options>" +
 			"\nthere are three command line options" +
-			"\n(display) -d [(everything by default) | -t \"title\" | -a \"author\" ]" +
+			"\n(display) -d | -e \"sorted by expiration date\"" +
 			"\n(add) -a Product \"Product_name\" type_of_product location [ cooked|raw ] expiration status" +
-			"\n(remove) -s [-t title | -a author]\n");
+			"\n(remove) -r \n");
 	}
 
 
