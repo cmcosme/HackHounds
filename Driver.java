@@ -9,7 +9,9 @@ public class Driver{
 
 
 		Product item = new Product("04-12-2025", "fruit", "g", "apple", "fridge", "cooked");
+		Product item2 = new Product("04-12-2025", "fruit", "g", "pineapple", "fridge", "cooked");
 		inven.addProduct(item);
+		inven.addProduct(item2);
 		inven.iterate();
 
 		inven.displayExpDate(inven);
