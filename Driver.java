@@ -14,7 +14,8 @@ public class Driver{
 		inven.addProduct(item2);
 		inven.iterate();
 
-		inven.displayExpDate(inven);
+		//display by date sorted
+		inven.displayExpDate();
 
 		//testing remove
 		System.out.println("Remove successful");
