@@ -61,52 +61,55 @@ public class Product{
 		}	
 	}
 
+	/*
 	public void expirationDate(String type){
 		//get local date as int
 		LocalDate date = LocalDate.now();//create date object
-
+		DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+		
 
 		//add to date
 		switch(type.toLowerCase){
 		case "meat":
-			this.expiration = ;
+			this.expiration = date.plusDays().format(dateFormatter);
 			break;
 		case "fruit":
-			this.expiration = ;
+			this.expiration = date.plusDays(daystoAdd).format(dateFormatter) ;
 			break;
 		case "grain": 
-			this.expiration = ;
+			this.expiration = date.plusDays(daystoAdd).format(dateFormatter);
 			break;
 		case "vegetable": 
-			this.expiration = ;
+			this.expiration = date.plusDays(daystoAdd).format(dateFormatter);
 			break;
 		case "nut":
-			this.expiration = ;
+			this.expiration = date.plusDays(daystoAdd).format(dateFormatter);
 			break;
 		case "egg":
-			this.expiration = ;
+			this.expiration = date.plusDays(daystoAdd).format(dateFormatter);
 			break;
 		case "dairy":
-			this.expiration = ;
+			this.expiration = date.plusDays(daystoAdd).format(dateFormatter);
 			break;
 		case "processed":
-			this.expiration = ;
+			this.expiration = date.plusDays(daystoAdd).format(dateFormatter);
 			break;
 		case "medicine":
-			this.expiration = ;
+			this.expiration = date.plusDays(daystoAdd).format(dateFormatter);
 			break;
 		case "spices":
-			this.expiration = ;
+			this.expiration = date.plusDays(daystoAdd).format(dateFormatter);
 			break;
 		case "leftovers":
-			this.expiration = ;
+			this.expiration = date.plusDays(daystoAdd).format(dateFormatter);
 			break;
 		case "other": 
-			this.expiration = ;
+			this.expiration = date.plusDays(daystoAdd).format(dateFormatter);
 			break;
 
 		}
 	}
+	*/
 	
 	/**
 	 * Format nicely.
