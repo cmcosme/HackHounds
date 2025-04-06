@@ -1,8 +1,13 @@
+/**
+* This is my code! It's goal is to store products in the Inventory.
+* HackHounds 2024, PET (Product Expiration Tracker)
+* @author Camila Cosme, Donovan, Henry, Gigi
+* @version a.1
+*/
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 public class Product implements Comparable<Product>{
-        
-	//attributes
 	protected String expiration; //expiration date
 	protected String type; //type of product
 	protected String status; // (3) Good, about to expire, expired 
@@ -10,7 +15,6 @@ public class Product implements Comparable<Product>{
 	protected String location;
 	protected String cooked;
 	
-	//constructor
 	public Product(String ex, String ty, String stats, String name, String location, String cooked){
 		expiration = ex;
 		type = ty;
@@ -20,7 +24,6 @@ public class Product implements Comparable<Product>{
 		this.cooked = cooked;
 	}
 	
-	//methods
 	
 	/**
 	 * Updates the status of the item depending on date - expiration date.
@@ -61,7 +64,9 @@ public class Product implements Comparable<Product>{
 		}	
 	}
 
-
+	/**
+	 * Check to see if product exists. 
+	 */
 	public boolean isProduct(String name){
 		return this.productName.equals(name);
 	}
@@ -115,7 +120,10 @@ public class Product implements Comparable<Product>{
 		}
 	}
 	*/
-	
+
+	/**
+	 * Compares product's expiration date to sort
+	 */	
 	@Override
 	public int compareTo(Product x){
 		//return this.exponent - x.exponent; //ascending order - need decending order

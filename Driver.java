@@ -1,3 +1,11 @@
+/**
+* This is my code! It's goal is to store products in the Inventory.
+* HackHounds 2024, PET (Product Expiration Tracker)
+* @author Camila Cosme, Donovan, Henry, Gigi
+* @version a.1
+*/
+
+
 import java.util.Scanner;
 import java.util.StringTokenizer;
 import java.util.Iterator;
@@ -31,10 +39,6 @@ public class Driver{
 		inven.findProduct("apple");
 
 */
-
-
-
-
 
 	//Create CLI
 	CLI cli = new CLI(inven);
