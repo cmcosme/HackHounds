@@ -39,9 +39,9 @@ public class Inventory{
 	/**
 	 * Remove product by _.
 	 */
-	public void removeProduct(Product product){
+	public void removeProduct(String name){
 		for(int i = 0; i < products.size(); i++){
-			if(product.productName.equals(products.get(i).productName)) products.remove(i);
+			if(name.equals(products.get(i).productName)) products.remove(i);
 		}
 
 	}
